@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Art-Ground</title>
+    <link  class="topLogo" rel="shortcut icon" href="./img/logo.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+        /* Modal uchun z-index qiymatlari */
+.modal {
+  z-index: 1055 !important; /* Modal oyna */
+}
+
+.modal-backdrop {
+  z-index: 1050 !important; /* Orqa fon */
+}
+
+/* Videoni modalning eng oldiga chiqaramiz */
+video {
+  position: relative;
+  z-index: 1059 !important; /* Video modaldan oldinda turadi */
+}
+
+ /* btn-close tugmasi matnining rangini oq qilib belgilash */
+ .bt-cl {
+  background: #00000000;
+    color: #fff !important; /* Matn oq rangga o'rnatiladi */
+    text-shadow: none; /* Bootstrap standart soyasini o'chiradi */
+    opacity: 1; /* Tugmaning ko'rinish darajasi to'liq */
+   font-size: 20px;
+    margin-top: -50px;
+    cursor: pointer;
+    text-align: end;
+  }
+
+  
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <!-- Logo -->
+          <div class="logo-wrapper">
+            <a class="logo " href="index.html">
+              <img style="width: 60px;" src="img/logo.png" class="logo-img" alt="" />
+            </a>
+            <!--  <a class="logo" href="index.html"><div class="logo"><img src="img/logo.png" alt=""></div></a> -->
+          </div>
+          <!-- Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"
+              ><i class="fa-solid fa-bars"></i
+            ></span>
+          </button>
+          <!-- Menu -->
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ms-auto">
+                      <li class="nav-item "><a class="nav-link " href="index.html">Home</a></li>
+  
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services3.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery-image.html">Gallery </a>
+              </li>
+           
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- Header Banner -->
+    <section class="banner-header section-padding bg-img" data-overlay-dark="5" data-background="img/slider/1.jpg">
+        <div class="v-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center mt-30">
+                        <h6>Who are we?</h6>
+                        <h1>Art-Ground<span>Art decoration</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- About -->
+<section class="about section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-12">
+          <div class="content">
+            <div class="section-subtitle">About Us</div>
+            <div class="section-title"><span>Art-Ground</span> Art decoration</div>
+            <p>
+              Art decoration quisque sodales intioni varius estibulum rana tonton
+              miss ortiton telus euismod nis the massa odio miss farmen lorem
+              etium thesit ametis fermen.
+            </p>
+            <ul class="list-unstyled list">
+              <li>
+                <div class="list-icon"><span class="ti-check"></span></div>
+                <div class="list-text">
+                  <p>Custom Modern Design</p>
+                </div>
+              </li>
+              <li>
+                <div class="list-icon"><span class="ti-check"></span></div>
+                <div class="list-text">
+                  <p>10 Years of Experience</p>
+                </div>
+              </li>
+            </ul>
+            <a href="about.html" class="button-4"
+              >Read More <span class="ti-arrow-top-right"></span
+            ></a>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1 col-md-12 mt-30">
+          <a href="./img/Artground.mp4"
+          class="vid arrow"
+          data-bs-toggle="modal"
+          data-bs-target="#videoModal"
+          data-title="Artground Video"
+        >
+          <div class="item">
+            
+          <img  src="img/ArtImage.jpg" class="img-fluid" alt="" />
+       
+            <div class="bottom-fade"></div>
+            <div class="icon">
+              <!-- Video Modal Trigger -->
+              <a href="./img/Artground.mp4"
+                class="vid arrow"
+                data-bs-toggle="modal"
+                data-bs-target="#videoModal"
+                data-title="Artground Video"
+              >
+                <span class="ti-control-play"></span>
+              </a>
+            </div>
+            <div class="title">
+              <h4>Watch Video</h4>
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modal -->
+  <div  class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered videow" style="  min-width: 50%;">
+      <div class="modal-content " style="width: 100%;">
+        <button 
+        type="button" 
+        class="bt-cl" 
+        data-bs-dismiss="modal" 
+        aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+        <!-- <div class="modal-body text-center"> -->
+          <video style=" border-radius: 10px;" id="modalVideo" controls class="w-100 h-100">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        <!-- </div> -->
+      </div>
+    
+      </div>
+  </div>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+      $('.vid').on('click', function (e) {
+        e.preventDefault();
+        const videoUrl = $(this).attr('href'); // Triggerdagi video URL-ni oladi
+        const videoTitle = $(this).data('title'); // Triggerdagi sarlavhani oladi
+        $('#modalVideo').attr('src', videoUrl); // Modal oynasiga videoni yuklaydi
+        $('#videoModalLabel').text(videoTitle); // Modal oynasining sarlavhasini o'rnatadi
+      });
+  
+      // Modal yopilganda video to'xtaydi
+      $('#videoModal').on('hidden.bs.modal', function () {
+        $('#modalVideo').attr('src', ''); // Videoni tozalaydi
+      });
+    });
+  </script>
+  
+
+    <!-- divider line -->
+    <div class="line-vr-section"></div>
+    <!-- About More -->
+    <section class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-30">
+                    <div class="img2"> <img src="img/Brat.png" alt="">
+                        <div class="text">
+                            <h6>founder</h6>
+                            <div class="shap-left-bottom">
+                                <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+                                    <path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="#101010"></path>
+                                </svg>
+                            </div>
+                            <div class="shap-right-bottom">
+                                <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+                                    <path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="#101010"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 col-md-12">
+                    <div class="content">
+                        <div class="section-subtitle">Services</div>
+                        <div class="section-title">We Create Your Dream Space</div>
+                        <p>We create modern and sophisticated decorations for elegant spaces</p>
+                        <ul class="list-unstyled list mb-30">
+                            <li>
+                                <div class="list-icon"> <span class="ti-check"></span> </div>
+                                <div class="list-text">
+                                    <p>Highly Experienced</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list-icon"> <span class="ti-check"></span> </div>
+                                <div class="list-text">
+                                    <p>Full Project Delivery</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list-icon"> <span class="ti-check"></span> </div>
+                                <div class="list-text">
+                                    <p>Best Interior Choice</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video -->
+    <section class="video-wrapper video section-padding bg-img bg-fixed" data-overlay-dark="5" data-background="img/slider/1.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-subtitle">Explore</div>
+                    <div class="section-title white">Promo Video</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center col-md-12">
+                    <a class="vid" href="./img/Artground.mp4"
+                    class="vid arrow"
+                    data-bs-toggle="modal"
+                    data-bs-target="#videoModal"
+                    data-title="Artground Video" >
+                        <div class="vid-butn"> <span class="icon"> <i class="ti-control-play"></i> </span> </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+      <!-- Modal -->
+      <div  class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered videow" style="  min-width: 50%;">
+          <div class="modal-content " style="width: 100%;">
+            <button 
+            type="button" 
+            class="bt-cl" 
+            data-bs-dismiss="modal" 
+            aria-label="Close">
+            <i class="fas fa-times"></i>
+          </button>
+            <!-- <div class="modal-body text-center"> -->
+              <video style=" border-radius: 10px;" id="modalVideo" controls class="w-100 h-100">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            <!-- </div> -->
+          </div>
+        
+          </div>
+      </div>
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      
+      <script>
+        $(document).ready(function () {
+          $('.vid').on('click', function (e) {
+            e.preventDefault();
+            const videoUrl = $(this).attr('href'); // Triggerdagi video URL-ni oladi
+            const videoTitle = $(this).data('title'); // Triggerdagi sarlavhani oladi
+            $('#modalVideo').attr('src', videoUrl); // Modal oynasiga videoni yuklaydi
+            $('#videoModalLabel').text(videoTitle); // Modal oynasining sarlavhasini o'rnatadi
+          });
+      
+          // Modal yopilganda video to'xtaydi
+          $('#videoModal').on('hidden.bs.modal', function () {
+            $('#modalVideo').attr('src', ''); // Videoni tozalaydi
+          });
+        });
+      </script>
+
+
+    <!-- Team -->
+    <!-- <section class="team section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-30">
+                    <div class="section-subtitle">Seniors</div>
+                    <div class="section-title"><span>Team</span> Members</div>
+                    <p>Architecture quisque sodales miss in the varius vestibulum drana tonton turpis porttiton tellus formention drana in the fermen.</p> <a href="team.html" class="button-4">All Team <span class="ti-arrow-top-right"></span></a>
+                </div>
+                <div class="col-lg-8 col-md-12">
+                    <div class="team-container">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="wrapper"> <img src="img/team/1.jpg" class="img-fluid" alt="">
+                                    <div class="icon"> <a href="team-single.html" class="arrow"><span class="ti-info"></span></a> </div>
+                                    <div class="text">
+                                        <h4 class="name">Grace Martin</h4>
+                                        <h6 class="position">Architect</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="wrapper"> <img src="img/team/2.jpg" class="img-fluid" alt="">
+                                    <div class="icon"> <a href="team-single.html" class="arrow"><span class="ti-info"></span></a> </div>
+                                    <div class="text">
+                                        <h4 class="name">Liam Brown</h4>
+                                        <h6 class="position">Designer</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="wrapper"> <img src="img/team/3.jpg" class="img-fluid" alt="">
+                                    <div class="icon"> <a href="team-single.html" class="arrow"><span class="ti-info"></span></a> </div>
+                                    <div class="text">
+                                        <h4 class="name">Anna Sarah</h4>
+                                        <h6 class="position">Architect</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="wrapper"> <img src="img/team/4.jpg" class="img-fluid" alt="">
+                                    <div class="icon"> <a href="team-single.html" class="arrow"><span class="ti-info"></span></a> </div>
+                                    <div class="text">
+                                        <h4 class="name">Lucas White</h4>
+                                        <h6 class="position">Architect</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="wrapper"> <img src="img/team/5.jpg" class="img-fluid" alt="">
+                                    <div class="icon"> <a href="team-single.html" class="arrow"><span class="ti-info"></span></a> </div>
+                                    <div class="text">
+                                        <h4 class="name">Henry Mccury</h4>
+                                        <h6 class="position">Designer</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="wrapper"> <img src="img/team/6.jpg" class="img-fluid" alt="">
+                                    <div class="icon"> <a href="team-single.html" class="arrow"><span class="ti-info"></span></a> </div>
+                                    <div class="text">
+                                        <h4 class="name">Tyler Cooper</h4>
+                                        <h6 class="position">Architect</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- divider line -->
+    <div class="line-vr-section"></div>
+   <!-- Testimonials -->
+   <section class="testimonials section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center mb-20">
+          <div class="section-subtitle">Testimonials</div>
+          <div class="section-title">What <span>Clients</span> Say</div>
+        </div>
+        <div class="col-md-12">
+          <div class="owl-carousel owl-theme">
+            <div  class="item">
+              <i class="fa-solid fa-quote-left"></i>
+              <div  class="text">
+                <p style="min-height: 198px; ">
+                  Gap yo ishilaga omad juda chiroyli chiqipdi ilohim qolilar dart kormasin Art graund jamosiga omad👏👏
+
+                </p>
+              </div>
+              <div class="info mt-30">
+                <div class="img-curv">
+                  <div class="img"><img src="img/team/a.jpg" alt="" /></div>
+                  <div class="shap-left-top">
+                    <svg
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-11 h-11"
+                    >
+                      <path
+                        d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                        fill="#101010"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="shap-right-bottom">
+                    <svg
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-11 h-11"
+                    >
+                      <path
+                        d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                        fill="#101010"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="ml-30">
+                  <h6>Safiya</h6>
+                  <p>Customer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="fa-solid fa-quote-left"></i>
+              <div class="text">
+                <p style="min-height: 198px; ">
+                  Juda ajoyib! Ishinglaga muvaffaqiyatlar tilayman!👏
+                </p>
+              </div>
+              <div class="info mt-30">
+                <div class="img-curv">
+                  <div class="img"><img src="img/team/b.jpg" alt="" /></div>
+                  <div class="shap-left-top">
+                    <svg
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-11 h-11"
+                    >
+                      <path
+                        d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                        fill="#101010"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="shap-right-bottom">
+                    <svg
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-11 h-11"
+                    >
+                      <path
+                        d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                        fill="#101010"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="ml-30">
+                  <h6> Samir </h6>
+                  <p>Customer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="fa-solid fa-quote-left"></i>
+              <div class="text">
+                <p style="min-height: 198px; ">
+                  Почему то думал что это сделали зарубежные специалисты,но когда увидел что это Дело наших местных Мастеров, очень удивился,в хорошем смысле этого слова. Обалдеть! МОЛОДЦЫ !
+
+                </p>
+              </div>
+              <div class="info mt-30">
+                <div class="img-curv">
+                  <div class="img"><img src="img/team/d.jpg" alt="" /></div>
+                  <div class="shap-left-top">
+                    <svg
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-11 h-11"
+                    >
+                      <path
+                        d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                        fill="#101010"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="shap-right-bottom">
+                    <svg
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-11 h-11"
+                    >
+                      <path
+                        d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                        fill="#101010"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="ml-30">
+                  <h6>Akbarali</h6>
+                  <p>Customer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- Lets Talk -->
+ <section class="lets-talk">
+    <div class="background bg-img bg-fixed section-padding" data-overlay-dark="5" data-background="img/slider/1.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-subtitle">Contact Us</div>
+                    <div class="section-title">Let’s talk.
+                        <br>Have a project in mind?
+                    </div>
+                    <div class="wrap">
+                        <div class="social">
+                            <a href="https://www.instagram.com/artground.company/profilecard/?igsh=MTdobG5haDk1Y2s4YQ==" class="icon"> <i class="fa-brands fa-instagram"></i> </a>
+                            <!-- <a href="#" class="icon"> <i class="fa-brands fa-twitter"></i> </a> -->
+                            <a href="https://t.me/sardorartikov7" class="icon"> <i class="fa-brands fa-telegram"></i> </a>
+                            <a href="https://t.me/sardorartikov7" class="icon"> <i class="fa-brands fa-youtube"></i> </a>
+
+                            <!-- <a href="#" class="icon"> <i class="fa-brands fa-whatsapp"></i> </a> -->
+                        </div>
+                        <div class="dv"></div> <a href="mailto:artikovsardor7@gmail.com">artikovsardor7@gmail.com</a>
+                        <!-- <div class="dv"></div> <a href="https://t.me/sardorartikov7">Telegram</a> -->
+                        <div class="dv"></div> <a href="tel:+998991476797">+998991476797</a>
+                        <div class="dv"></div> <a href="contact.html">Contact</a>
+                        <!-- <div class="dv"></div> <a data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" href="#0">Contact<i class="icon-right fa-light fa-arrow-up-right"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- Footer -->
+ <footer class="footer bg">
+    <div class="container">
+      <!-- top -->
+      <div class="top">
+        <div class="row">
+          <div class="col-md-4 mb-30">
+            <div class="item">
+
+              <div class="logo"> <a href="#"><img  style=" width: 60px;"  src="img/ArtLogo.png" alt="" /></a></div>
+              <p>
+                ArtGround – creating harmony in decorative architecture and modern design
+              </p>
+              <div class="social-icons">
+                <ul class="list-inline">
+                  <li>
+                    <a href="https://t.me/sardorartikov7" target="_blank">
+                      <i class="fa-brands fa-telegram"></i>
+                    </a>
+                                        </li>
+                  <li>
+                    <a target="_blank" href="https://www.instagram.com/artground.company/?igsh=MTdobG5haDk1Y2s4YQ%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+               
+                  <li>
+                    <a target="_blank" href="https://www.instagram.com/artground.company/?igsh=MTdobG5haDk1Y2s4YQ%3D%3D"><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 offset-md-1 mb-30">
+            <div class="item">
+              <h3>Quick Links</h3>
+              <div class="links">
+                <ul>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Services</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-30">
+            <div class="item">
+              <h3>connection</h3>
+              <p>
+                Do you have an idea? We’ll make it a reality. Leave us your email
+              </p>
+              <div class="newsletter">
+                <form action="#">
+                  <input type="email" placeholder="Email Address" required />
+                  <button type="submit">
+                    <i class="ti-arrow-top-right"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- bottom -->
+      <div class="bottom">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="mb-0">
+              &copy; magicode 
+              <!-- <a href="">DuruThemes</a>. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <!-- Popup Contact Form -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-box">
+                        <form method="post">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input name="name" type="text" placeholder="Your Name *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input name="email" type="email" placeholder="Your Email *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input name="phone" type="text" placeholder="Your Number *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input name="subject" type="text" placeholder="Subject *" required>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" required></textarea>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="modal-button">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-migrate-3.4.1.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

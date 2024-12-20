@@ -1,0 +1,21 @@
+.custom-button {
+    background-color: #007bff; /* Ko'k rang */
+    color: #ffffff; /* Oq matn */
+    padding: 10px 20px; /* Tugma ichidagi bo'shliq */
+    border: none; /* Chegarani olib tashlash */
+    border-radius: 5px; /* Tugma burchaklarini yumaloqlash */
+    font-size: 16px; /* Matn o'lchami */
+    font-weight: 600; /* Matn qalinligi */
+    cursor: pointer; /* Hoverda ko'rsatgichni o'zgartirish */
+    transition: background-color 0.3s ease; /* Hover animatsiyasi */
+}
+
+.custom-button:hover {
+    background-color: #0056b3; /* Hover holati uchun quyuqroq ko'k */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tugmaga hover effekti */
+}
+
+.custom-button:active {
+    background-color: #004085; /* Tugma bosilganda quyuqroq ko'k */
+    transform: scale(0.98); /* Bosilganda kichikroq ko'rinish */
+}
