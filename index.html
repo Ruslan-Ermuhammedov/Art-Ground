@@ -80,8 +80,18 @@ video {
   }
 
   
+  .navbar-collapse {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.navbar-collapse.show {
+  display: block;
+}
 
     </style>
+
+    
   </head>
   <body>
     <!-- Preloader -->
@@ -103,54 +113,70 @@ video {
         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
       </svg>
     </div>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <!-- Logo -->
-        <div class="logo-wrapper">
-          <a class="logo " href="index.html">
-            <img style="width: 60px;" src="img/logo.png" class="logo-img" alt="" />
-          </a>
-          <!--  <a class="logo" href="index.html"><div class="logo"><img src="img/logo.png" alt=""></div></a> -->
-        </div>
-        <!-- Button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar"
-          aria-controls="navbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"
-            ><i class="fa-solid fa-bars"></i
-          ></span>
-        </button>
-        <!-- Menu -->
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active"><a class="nav-link active" href="index.html">Home</a></li>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo-wrapper">
+      <a class="logo" href="index.html">
+        <img style="width: 60px;" src="img/logo.png" class="logo-img" alt="Logo" />
+      </a>
+    </div>
 
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services3.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery-image.html">Gallery </a>
-            </li>
-         
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- Button -->
+    <button id="navbar-toggler" class="navbar-toggler" type="button">
+      <span class="navbar-toggler-icon">
+        <i class="fa-solid fa-bars"></i>
+      </span>
+    </button>
+
+    <!-- Menu -->
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services3.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery-image.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- JavaScript -->
+<script>
+  const navbarToggler = document.getElementById('navbar-toggler');
+  const navbar = document.getElementById('navbar');
+
+  // Menyu ochish/yopish funksiyasi
+  navbarToggler.addEventListener('click', function () {
+    navbar.classList.toggle('show');
+  });
+
+  // Scroll bo'lganda menyuni yashirish
+  window.addEventListener('scroll', function () {
+    if (navbar.classList.contains('show')) {
+      navbar.classList.remove('show');
+    }
+  });
+</script>
+
+
+
+
     <!-- Slider -->
     <header class="header slider-fade">
       <div class="owl-carousel owl-theme">
@@ -191,7 +217,7 @@ video {
                   <p>
                     Creative decoration is not just embellishment, but the expression of beauty and uniqueness embedded in every space
                   </p>
-                  <a href="#" class="button-1"
+                  <a href="#\services3.html" class="button-1"
                     >Explore More <span class="ti-arrow-top-right"></span
                   ></a>
                 </div>
@@ -213,7 +239,7 @@ video {
                   <p>
                     Every detail created in the harmony of art and architecture is a bridge built to turn your dreams into reality
                   </p>
-                  <a href="#" class="button-1"
+                  <a href="services3.html" class="button-1"
                     >Explore More <span class="ti-arrow-top-right"></span
                   ></a>
                 </div>
@@ -232,12 +258,11 @@ video {
       <div class="col-lg-5 col-md-12">
         <div class="content">
           <div class="section-subtitle">About Us</div>
-          <div class="section-title"><span>Art-Ground</span> Art decoration</div>
+          <div class="section-title"><span>Art Ground</span> Art decoration</div>
           <p>
-            Art decoration quisque sodales intioni varius estibulum rana tonton
-            miss ortiton telus euismod nis the massa odio miss farmen lorem
-            etium thesit ametis fermen.
-          </p>
+          ArtGround     
+          We build all kinds of designer constructions and decorations! Our services are available worldwide!
+           </p>
           <ul class="list-unstyled list">
             <li>
               <div class="list-icon"><span class="ti-check"></span></div>
@@ -856,8 +881,8 @@ video {
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center mb-20">
-            <div class="section-subtitle">Our Blog</div>
-            <div class="section-title">Latest Articles</div>
+            <div class="section-subtitle">Our Galereya</div>
+            <div class="section-title">Galereya</div>
           </div>
           <div class="col-md-12">
             <div class="owl-carousel owl-theme">
@@ -917,7 +942,7 @@ video {
                   <img  src="img/HayvonotBog‘i.jpg" class="img-fluid" alt="" />
                   <div class="bottom-fade"></div>
                   <div class="title">
-                    <h4>Building a Mountain Private Villa</h4>
+                    <h4>Zoopark</h4>
                   </div>
                   
                 </div>
@@ -929,7 +954,7 @@ video {
                   <img  src="img/Ashxobodsaylgohi.jpg" class="img-fluid" alt="" />
                   <div class="bottom-fade"></div>
                   <div class="title">
-                    <h4>Building a Mountain Private Villa</h4>
+                    <h4>Ashxobod Parl</h4>
                   </div>
                   
                 </div>
@@ -952,14 +977,14 @@ video {
                       <br>Have a project in mind?
                   </div>
                   <div class="wrap">
-                      <div class="social">
-                          <a href="https://www.instagram.com/artground.company/profilecard/?igsh=MTdobG5haDk1Y2s4YQ==" class="icon"> <i class="fa-brands fa-instagram"></i> </a>
-                          <a href="https://t.me/sardorartikov7" class="icon"> <i class="fa-brands fa-youtube"></i> </a>
+                    <div class="social">
+                      <a href="https://t.me/sardorartikov7" class="icon"> <i class="fa-brands fa-telegram"></i> </a>
+                        <a href="https://www.instagram.com/artground.company/profilecard/?igsh=MTdobG5haDk1Y2s4YQ==" class="icon"> <i class="fa-brands fa-instagram"></i> </a>
+                        <a href="https://t.me/sardorartikov7" class="icon"> <i class="fa-brands fa-youtube"></i> </a>
 
-                          <!-- <a href="#" class="icon"> <i class="fa-brands fa-twitter"></i> </a> -->
-                          <a href="https://t.me/sardorartikov7" class="icon"> <i class="fa-brands fa-telegram"></i> </a>
-                          <!-- <a href="#" class="icon"> <i class="fa-brands fa-whatsapp"></i> </a> -->
-                      </div>
+                        <!-- <a href="#" class="icon"> <i class="fa-brands fa-twitter"></i> </a> -->
+                        <!-- <a href="#" class="icon"> <i class="fa-brands fa-whatsapp"></i> </a> -->
+                    </div>
                       <div class="dv"></div> <a href="mailto:artikovsardor7@gmail.com">artikovsardor7@gmail.com</a>
                       <!-- <div class="dv"></div> <a href="https://t.me/sardorartikov7">Telegram</a> -->
                       <div class="dv"></div> <a href="tel:+998991476797">+998991476797</a>
